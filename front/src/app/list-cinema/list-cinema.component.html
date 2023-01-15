@@ -1,0 +1,94 @@
+
+
+
+<style>
+
+  .content-table{
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0,9cm;
+    min-width: 1450px;
+    border-radius: 5px 5px 0 0;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0, 15);
+
+  }
+
+  .content-table thead tr {
+    background-color:#37179f;
+    color: #ffffff;
+    text-align: left;
+    font-weight: bold ;
+  }
+  .content-table th,
+  .content-table td {
+    padding: 12px 15px;
+  }
+
+  .content-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+  }
+  .content-table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3 ;
+  }
+  .content-table tbody tr:last-of-type {
+    border-bottom: 2px solid #4f34a9;
+  }
+
+  .content-table tbody tr.active-row {
+    font-weight: bold;
+    color: #37179f;
+  }
+  tr:hover {background-color: rgb(255, 174, 0);}
+.h1 {
+  color: rgb(255, 174, 0);
+  text-align:center
+}
+
+</style>
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="/salle">check salle <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/film">check movies</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/cinema">check cinema</a>
+      </li>
+
+    </ul>
+
+  </div>
+</nav>
+
+<h1 class ="h1" >Check our cinemas</h1>
+
+<table class="content-table">
+  <thead>  <tr>
+    <th>id</th>
+    <th>nom</th>
+
+
+  </tr>
+</thead>
+  <tr *ngFor ="let c of Cinema">
+  <td>{{c.id}}</td>
+  <td>{{c.nom}}</td>
+
+</tr>
+</table>
+
+
+
+
+
